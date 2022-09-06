@@ -1,12 +1,14 @@
+import "@fontsource/manrope"
+
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
 export const theme = extendTheme({
-  // fonts: {
-  //   body: "Manrope, sans-serif",
-  //   heading: "Manrope, sans-serif",
-  // },
+  fonts: {
+    body: "Manrope, sans-serif",
+    heading: "Manrope, sans-serif",
+  },
   styles: {
     global: {
       body: {
