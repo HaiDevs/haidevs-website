@@ -25,4 +25,4 @@ jobs:
           './*' => ./haidevs-website
         last_ssh: |
           cd ./haidevs-website &&
-          docker-compose up -d --build
+          docker compose up -d --build
