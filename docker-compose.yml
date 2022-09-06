@@ -2,9 +2,9 @@ version: "3.9"
 services:
   caddy:
     image: caddy:2.5.2-alpine
-    container_name: ghost-prod-caddy
+    container_name: haidevs-web-caddy
     depends_on:
-      - ghost
+      - web
     restart: unless-stopped
     ports:
       - 80:80
