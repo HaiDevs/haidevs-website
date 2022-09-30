@@ -1,6 +1,5 @@
 import "@fontsource/manrope/variable.css"
 
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
@@ -16,7 +15,14 @@ export const theme = extendTheme({
         color: '#fff',
       },
 
+      // We'll credit fullPage.js via the Readme
+      // This is an open-source project
+      '.fp-watermark': {
+        display: 'none'
+      },
+
       // To hide the default focus outline on elements that are keyboard focusable
+      // We'll figure out a better way to support accessibility
       '*:focus': {
         shadow: 'none !important',
       },
