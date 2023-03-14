@@ -10,8 +10,12 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-We use Docker for deployment and GitHub Actions for Continuous Delivery - no need to worry about those at all though.
+We use Vercel for deployments.
+
+## Branching Model
+
+TBD
 
 ## Contributing
 
-*We will soon document how you can contribute to this project.*
+Refer to our [CONTRIBUTING.md](CONTRIBUTING.md) file.
