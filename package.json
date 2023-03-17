@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +17,8 @@
     "@fullpage/react-fullpage": "^0.1.28",
     "framer-motion": "^6",
     "next": "12.2.5",
+    "next-seo": "^5.15.0",
+    "next-sitemap": "^4.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0"

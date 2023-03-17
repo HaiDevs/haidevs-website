@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import { Flex, Heading, Text } from '@chakra-ui/react'
+import type { NextPage } from 'next'
+import { NextSeo } from 'next-seo'
 import Head from 'next/head'
-import { Flex, Heading, Text } from "@chakra-ui/react";
 import { SocialMediaBox } from "@components/SocialMediaBox";
 import { FaTwitter, FaDiscord } from 'react-icons/fa'
 
@@ -19,13 +21,7 @@ const Home = () => {
 
   return (
     <div className="App">
-      <Head>
-        <title>HaiDevs - Haitian Developers</title>
-        <meta name="description" content="Pi gwo kominote dijital Devlopè Ayisyen nan mond lan." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Menu />
+      <NextSeo title="Home"/>
 
       <ReactFullpage
         navigation
@@ -157,7 +153,7 @@ const Home = () => {
         }
       />
     </div>
-  );
+  )
 }
 
 export default Home;
