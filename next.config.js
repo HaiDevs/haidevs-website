@@ -9,7 +9,6 @@ const withPWA = require('next-pwa')({
 	dynamicStartUrl: true,
 	reloadOnOnline: true
 });
-
 const nextConfig = withPWA({
 	reactStrictMode: true,
   swcMinify: true,
