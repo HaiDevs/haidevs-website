@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require('next-pwa')({
 	dest: 'public',
-	disable: process.env.NODE_ENV == 'development',
+	// disable: process.env.NODE_ENV == 'development',
 	register: true,
 	skipWaiting: true,
 	scope: '/',
@@ -21,7 +21,6 @@ const nextConfig = withPWA({
 		// number of pages that should be kept simultaneously without being disposed
 		pagesBufferLength: 20,
 	},
-	basePath: '/'
 });
 
 module.exports = nextConfig;
