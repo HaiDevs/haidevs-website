@@ -198,7 +198,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
               rel: "manifest",
-              href: "/site.webmanifest", // duplacate of manifest.json for modern broswer support
+              href: "/site.webmanifest", // duplicate of manifest.json for modern broswer support
           },
         ]}
         languageAlternates={[
