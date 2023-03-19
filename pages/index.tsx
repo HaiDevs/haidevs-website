@@ -18,12 +18,14 @@ const Home = () => {
   const Menu = () => (
     null
   );
-  
+
   return (
     <div className="App">
       <NextSeo title="Home" />
       <Menu />
+
       <ReactFullpage
+        credits={{ enabled: false }}
         navigation
         licenseKey="gplv3-license"
         pluginWrapper={pluginWrapper}
