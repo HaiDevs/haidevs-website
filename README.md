@@ -15,3 +15,7 @@ We use Docker for deployment and GitHub Actions for Continuous Delivery - no nee
 ## Contributing
 
 *We will soon document how you can contribute to this project.*
+
+## Credits
+
+- [React Fullpage](https://alvarotrigo.com/react-fullpage/)
