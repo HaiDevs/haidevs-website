@@ -21,9 +21,10 @@ const Home = () => {
 
   return (
     <div className="App">
-      <NextSeo title="Home"/>
+      <NextSeo title="Home" />
 
       <ReactFullpage
+        credits={{ enabled: false }}
         navigation
         licenseKey="gplv3-license"
         pluginWrapper={pluginWrapper}
