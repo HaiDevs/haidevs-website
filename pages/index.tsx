@@ -4,85 +4,17 @@ import { Flex, Heading, Text, Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
+import { DrippinDown } from "@components/DrippinDown";
 import { SocialMediaBox } from "@components/SocialMediaBox";
 import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { EmotionJSX } from "@emotion/react/types/jsx-namespace";
 
-type DrippinDownProps = {
-  goDown: Function
-}
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
 const pluginWrapper = () => {
   /*
    * require('../static/fullpage.scrollHorizontally.min.js'); // Optional. Required when using the "scrollHorizontally" extension.
    */
 };
-
-const DrippinDown = ({ goDown }: DrippinDownProps) => {
-  return (
-    <Box onClick={goDown} sx={{
-      'div': {
-        position: 'absolute',
-        bottom: '100px',
-        left: '50%',
-      },
-      "& .chevron": {
-        position: 'absolute',
-        width: '28px',
-        height: '8px',
-        opacity: '0',
-        transform: 'scale3d(0.5, 0.5, 0.5)',
-        animation: 'move 3s ease-out infinite',
-        '&:first-of-type': {
-          animation: 'move 3s ease-out 1s infinite'
-        },
-        ':nth-of-type(2)': {
-          animation: 'move 3s ease-out 2s infinite'
-        },
-        '&:before, &: after': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          height: '100%',
-          width: '51%',
-          background: '#fff',
-        },
-        '&:before': {
-          left: 0,
-          transform: 'skew(0deg, 30deg)'
-        },
-        '&:after': {
-          right: 0,
-          width: '50%',
-          transform: 'skew(0deg, -30deg)'
-        }
-
-      },
-      "@keyframes move": {
-        "25%": {
-          opacity: 1,
-        },
-        "33%": {
-          opacity: 1,
-          transform: 'translateY(30px)',
-        },
-        "67%": {
-          opacity: 1,
-          transform: 'translateY(40px)',
-        },
-        "100%": {
-          opacity: 0,
-          transform: 'translateY(55px) scale3d(0.5, 0.5, 0.5)',
-        }
-      }
-    }}><>
-        <div className="chevron"></div>
-        <div className="chevron"></div>
-        <div className="chevron"></div>
-      </>
-    </Box >
-  )
-}
 
 const Home = () => {
   const Menu = () => (
