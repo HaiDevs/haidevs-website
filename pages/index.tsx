@@ -4,7 +4,7 @@ import { Flex, Heading, Text, Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import { DrippinDown } from "@components/DrippinDown";
+import { DrippingDown } from "@components/DrippingDown";
 import { SocialMediaBox } from "@components/SocialMediaBox";
 import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { EmotionJSX } from "@emotion/react/types/jsx-namespace";
@@ -53,7 +53,7 @@ const Home = () => {
                 nan mond lan.
               </Heading>
 
-              <DrippinDown goDown={fullpageApi && fullpageApi.moveSectionDown()} />
+              <DrippingDown goDown={fullpageApi && fullpageApi.moveSectionDown()} />
             </Flex>
 
             <Flex
@@ -128,7 +128,7 @@ const Home = () => {
                 </Flex>
               </Flex>
 
-              <DrippinDown goDown={fullpageApi && fullpageApi.moveSectionDown()} />
+              <DrippingDown goDown={fullpageApi && fullpageApi.moveSectionDown()} />
             </Flex>
 
             <Flex

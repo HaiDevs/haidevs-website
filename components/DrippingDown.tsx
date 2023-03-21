@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 
 
-export const DrippinDown: React.FC = () => {
+export const DrippingDown: React.FC = () => {
     return (
       <Box sx={{
         'div': {
