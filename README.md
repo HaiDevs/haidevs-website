@@ -1,5 +1,12 @@
 The Haitian Developers community website - currently at https://haidevs.alawonn.com
 
+## Tech in use
+
+- UI: React, Nextjs and Tailwind
+- Website hosting: Vercel
+- Database: PostgreSQL with potentially (Prisma ORM), or Xata
+- Database Hosting: Fly.io or Railway
+
 ## Getting Started
 
 First, run the development server:
