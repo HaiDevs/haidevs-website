@@ -1,0 +1,62 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature Request]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a feature request!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature you're requesting or the improvement you'd like to see.
+      placeholder: Tell us what you want to see!
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this feature help you in your work or personal life?
+      placeholder: Tell us your use case!
+    validations:
+      required: false
+  - type: input
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: If you have an idea of how this feature could be implemented, please describe it here.
+      placeholder: ex. Add a button that does XYZ
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
