@@ -1,4 +1,4 @@
-## [#Github Issue Number](Issue Link goes here)
+## #Github Issue Number
 
 ## Plan
 
@@ -70,7 +70,7 @@
 - [ ] Manual
     - The feature has been carefully tested manually
 - [ ] Automatic
-    -  The feature has been tested using automated unit tests
+    - The feature has been tested using automated unit tests
     - The feature has been tested using automated integration tests
     - The feature has been tested using end-to-end tests
 
