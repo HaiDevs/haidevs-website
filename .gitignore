@@ -38,3 +38,5 @@ next-env.d.ts
 # next-pwa generated files 
 public/sw*.*
 public/workbox*.*
+
+.history
