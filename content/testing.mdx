@@ -1,0 +1,42 @@
+---
+title: How to use Reduce in JavaScript
+tags:
+  - javascript
+date: '2023-05-09'
+excerpt: 'The reduce function of an array is one of the most versatile functions in JavaScript. With it you can accomplish a lot of the functions from array and math objects.'
+cover_image: 'https://source.unsplash.com/p0j-mE6mGo4'
+---
+
+
+<Image image={'https://source.unsplash.com/p0j-mE6mGo4'}/>
+
+
+Last month, I had the chance to attend CSS Day in Amsterdam, a two day event split between a “UI day” focusing on the intersection of design and development and a “CSS day”, with speakers who covered more in-depth, technical CSS subjects. The talks were as diverse as the background of the speakers themselves, but there was one common thread: in this era of rapid change, we have to ask ourselves if we, as product people, are equipped to design for:
+
+
+
+## Are we designing for users or ourselves?
+
+People don't always know what they want, even if they think the do. As Joe Leech, a UX psychologist says, "People want more choices, but can't deal with them.”
+
+So how do we design for our users, if our users aren’t always telling us the truth? This is one of the most important questions, and something that extensive UX research helps us accomplish.
+
+Back in the 2000s, psychologists Sheena Iyengar and Mark Lepper ran a study regarding consumer choices. They went to a local supermarket, and instructed the store to only sell 6 varieties of jam one week, followed by 30 varieties the following week.
+
+```js title="getStaticPaths"
+
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const paths = postFilePaths
+		// Remove file extensions for page paths
+		.map((path) => path.replace(/\.mdx?$/, ""))
+		// Map the path into the static paths object required by Next.js
+		.map((slug) => ({ params: { slug } }));
+
+	return {
+		paths,
+		fallback: false
+	};
+};
+
+```
