@@ -1,18 +1,16 @@
 import React from "react";
-import { Container, Box, Heading, Stack, Flex, VStack } from "@chakra-ui/react";
-
-import data from "@data/data.json";
+import { GetStaticProps } from "next";
+import { Heading, Stack, VStack, Center } from "@chakra-ui/react";
 import Post from "@components/Post";
-import Navbar from "@components/common/Navbar/Navbar";
-import Footer from "@components/common/Footer/Footer";
-import { IPostsProps } from "types/types";
+import { getAllPosts } from "utils/mdxUtils";
+import { IPost, IPosts } from "interfaces/Posts";
+import LayoutBlog from "@components/LayoutBlog";
 
-export default function Posts(props: IPostsProps) {
+export default function Posts({ posts }: IPosts) {
 	return (
-		<Container maxW="4xl">
-			<Navbar />
-			<Stack height={148} marginTop={50}>
-				<Flex alignItems="center" justifyContent="center">
+		<LayoutBlog>
+			<Center>
+				<Stack height={148} marginTop={50}>
 					<Heading
 						fontWeight={"900"}
 						fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
@@ -21,24 +19,36 @@ export default function Posts(props: IPostsProps) {
 					>
 						Blog
 					</Heading>
-				</Flex>
-			</Stack>
+				</Stack>
+			</Center>
 
 			<VStack spacing={20}>
-				{props.data.map((post: any, index: any) => (
-					<React.Fragment key={index}>
+				{posts.map((post: IPost) => (
+					<React.Fragment key={post.title}>
 						<Post {...post} />
 					</React.Fragment>
 				))}
 			</VStack>
-
-			<Footer />
-		</Container>
+		</LayoutBlog>
 	);
 }
 
-export async function getServerSideProps() {
+export const getStaticProps: GetStaticProps = async () => {
+	const posts = await getAllPosts();
+
+	posts
+		.map((post) => post.data)
+		.sort((a, b) => {
+			if (a.data.date > b.data.date) return 1;
+			if (a.data.date < b.data.date) return -1;
+
+			return 0;
+		});
+
 	return {
-		props: { data }
+		props: {
+			posts: posts.reverse()
+		}
 	};
-}
+};
+
