@@ -1,5 +1,5 @@
 import { Box, Container, Stack, SimpleGrid, Text } from "@chakra-ui/react";
-import Icons from "../Icons";
+import Icons from "./Icons";
 import Column from "./Column";
 
 export default function Footer() {

@@ -1,7 +1,7 @@
 import { ReactNode, Fragment } from "react";
 import { Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { IColumnProps } from "types/types";
+import { IFooter } from "interfaces/Footer";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
 	return (
@@ -11,7 +11,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 	);
 };
 
-export default function Column(props: IColumnProps) {
+export default function Column(props: IFooter) {
 	return (
 		<Stack align={"flex-start"}>
 			<ListHeader>{props.header}</ListHeader>
