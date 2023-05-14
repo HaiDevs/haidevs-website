@@ -18,7 +18,7 @@ import { Heading, useColorModeValue, Text, VStack } from "@chakra-ui/react";
 import Image from "@components/common/Image";
 import { useMDXComponents } from "mdx-components";
 import remarkToc from "remark-toc";
-import { TableOfContents } from "@components/TableContent";
+import OnThisPage from "@components/OnThisPage";
 import PostTags from "@components/PostTags";
 
 type PostPageProps = {
@@ -47,7 +47,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
 						{frontMatter.readingTime}
 					</Text>
 				</VStack>
-				<TableOfContents />
+				<OnThisPage />
 				<MDXRemote {...source} components={useMDXComponents({ Image })} />
 			</LayoutBlog>
 		</>
