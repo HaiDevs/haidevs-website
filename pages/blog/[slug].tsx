@@ -38,7 +38,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
         <PostTags tags={frontMatter.tags} />
         <Heading
           fontWeight={"900"}
-          fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
+          fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
           lineHeight={"110%"}
           as="h1"
           textAlign="center"
