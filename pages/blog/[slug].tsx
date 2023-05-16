@@ -18,40 +18,42 @@ import { Heading, useColorModeValue, Text, VStack } from "@chakra-ui/react";
 import Image from "@components/common/Image";
 import { useMDXComponents } from "mdx-components";
 import remarkToc from "remark-toc";
-import OnThisPage from "@components/OnThisPage";
 import PostTags from "@components/PostTags";
+import TableContents from "@components/TableContents";
+import Head from "next/head";
 
 type PostPageProps = {
-	source: MDXRemoteSerializeResult;
-	frontMatter: IPost;
+  source: MDXRemoteSerializeResult;
+  frontMatter: IPost;
 };
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
-	const gray = useColorModeValue("gray", "gray.800");
-	return (
-		<>
-			<LayoutBlog>
-				<VStack height={148} marginTop={50}>
-					<PostTags tags={frontMatter.tags} />
-					<Heading
-						fontWeight={"900"}
-						fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
-						lineHeight={"110%"}
-						as="h1"
-						textAlign="center"
-					>
-						{frontMatter.title}
-					</Heading>
-					<Text color={gray}>
-						{dayjs(frontMatter.date).format("MMMM D, YYYY")} &mdash;{" "}
-						{frontMatter.readingTime}
-					</Text>
-				</VStack>
-				<OnThisPage />
-				<MDXRemote {...source} components={useMDXComponents({ Image })} />
-			</LayoutBlog>
-		</>
-	);
+  const gray = useColorModeValue("gray", "gray.800");
+  return (
+    <LayoutBlog>
+      <Head>
+        <title>{frontMatter.title}</title>
+      </Head>
+      <VStack height={148} marginTop={50}>
+        <PostTags tags={frontMatter.tags} />
+        <Heading
+          fontWeight={"900"}
+          fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
+          lineHeight={"110%"}
+          as="h1"
+          textAlign="center"
+        >
+          {frontMatter.title}
+        </Heading>
+        <Text color={gray}>
+          {dayjs(frontMatter.date).format("MMMM D, YYYY")} &mdash;{" "}
+          {frontMatter.readingTime}
+        </Text>
+      </VStack>
+      <TableContents />
+      <MDXRemote {...source} components={useMDXComponents({ Image })} />
+    </LayoutBlog>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
