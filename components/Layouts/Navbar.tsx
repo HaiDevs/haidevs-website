@@ -3,7 +3,6 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
     Stack,
     Collapse,
     Icon,
@@ -14,7 +13,6 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
-    chakra,
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -39,7 +37,7 @@ export default function Navbar() {
                 borderStyle={'solid'}
                 align={'center'}
                 borderBottomColor={theme.colors.neutral["100"]}
-                >
+            >
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
                     ml={{ base: -2 }}
@@ -65,7 +63,7 @@ export default function Navbar() {
                         <DesktopNav />
                     </Flex>
                 </Flex>
-                <Stack
+                {/* <Stack
                     flex={{ base: 1, md: 0 }}
                     justify={'flex-end'}
                     direction={'row'}
@@ -92,7 +90,7 @@ export default function Navbar() {
                         }}>
                        Ouvri yon kont
                     </Button>
-                </Stack>
+                </Stack> */}
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>
@@ -104,7 +102,7 @@ export default function Navbar() {
 
 const DesktopNav = () => {
     const linkColor = useColorModeValue(theme.colors.neutral["100"], theme.colors.neutral["200"]);
-    const linkHoverColor = useColorModeValue(theme.colors.green["100"], theme.colors.green["800"]);
+    const linkHoverColor = useColorModeValue(theme.colors.neutral["200"], theme.colors.neutral["200"]);
     const popoverContentBgColor = useColorModeValue(theme.colors.neutral["800"], theme.colors.neutral["800"]);
 
     return (
@@ -238,7 +236,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                     {children &&
                         children.map((child) => (
                             // eslint-disable-next-line react-hooks/rules-of-hooks
-                            <Link key={child.label} py={2} href={child.href}  color={useColorModeValue(theme.colors.green['200'], theme.colors.green['300'])}>
+                            <Link key={child.label} py={2} href={child.href} color={useColorModeValue(theme.colors.green['200'], theme.colors.green['300'])}>
                                 {child.label}
                             </Link>
                         ))}
@@ -257,41 +255,11 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
     {
-        label: 'Kiyès Nou Ye',
-        children: [
-            {
-                label: 'Coming Soon',
-                subLabel: 'Coming Soon',
-                href: '/about-us',
-            },
-            {
-                label: 'Coming Soon',
-                subLabel: 'Coming Soon',
-                href: '/about-us',
-            },
-        ],
+        label: 'Kiyès Nou ye',
+        href: '/',
     },
     {
         label: 'Blòg',
-        children: [
-            {
-                label: 'Coming Soon',
-                subLabel:'Coming Soon',
-                href: '/blog',
-            },
-            {
-                label: 'Coming Soon',
-                subLabel: 'Coming Soon',
-                href: '/blog',
-            },
-        ],
-    },
-    {
-        label: 'Kontake Nou',
-        href: '/contact-us',
-    },
-    {
-        label: 'More',
-        href: '/',
+        href: '/blòg',
     },
 ];

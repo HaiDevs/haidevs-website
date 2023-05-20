@@ -4,7 +4,6 @@ import Hero from "@components/LandingPage/Hero"
 import Features from "@components/LandingPage/Features";
 import ContactUs from "@components/LandingPage/ContactUs";
 
-
 const Home = () => {
   return (
     <div className="App">

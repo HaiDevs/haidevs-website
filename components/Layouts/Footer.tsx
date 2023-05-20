@@ -3,25 +3,23 @@ import {
   Box,
   Container,
   Stack,
-  SimpleGrid,
   Text,
-  Link,
   VisuallyHidden,
   chakra,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FaTwitter, FaDiscord, FaInstagram, } from 'react-icons/fa';
+import { FaTwitter, FaDiscord } from 'react-icons/fa';
 import { theme } from 'utils/theme';
 
 
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
-  return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-      {children}
-    </Text>
-  );
-};
+// const ListHeader = ({ children }: { children: ReactNode }) => {
+//   return (
+//     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+//       {children}
+//     </Text>
+//   );
+// };
 
 const SocialButton = ({
   children,
@@ -34,7 +32,7 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue(theme.colors.neutral['600'], theme.colors.neutral['700'])}
+      bg={useColorModeValue(theme.colors.neutral['700'], theme.colors.neutral['700'])}
       rounded={'full'}
       w={8}
       h={8}
@@ -46,7 +44,7 @@ const SocialButton = ({
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue(theme.colors.green['600'], theme.colors.green['700']),
+        bg: useColorModeValue(theme.colors.neutral['800'], theme.colors.neutral['800']),
       }}>
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
@@ -61,7 +59,7 @@ const Footer = () => {
      borderTopColor={theme.colors.neutral['100']}
       bg={useColorModeValue(theme.colors.neutral['900'], theme.colors.neutral['800'])}
       color={useColorModeValue(theme.colors.neutral['100'], theme.colors.neutral['200'])}>
-      <Container as={Stack} maxW={'6xl'} py={10}>
+      {/* <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={8}>
           <Stack align={'flex-start'}>
             <ListHeader>Konpayi</ListHeader>
@@ -85,7 +83,7 @@ const Footer = () => {
           </Stack>
 
         </SimpleGrid>
-      </Container>
+      </Container> */}
 
       <Box
         borderTopWidth={1}
@@ -106,9 +104,6 @@ const Footer = () => {
             </SocialButton>
             <SocialButton label={'Discord'} href={'https://discord.gg/tDVzKz45'}>
               <FaDiscord />
-            </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
             </SocialButton>
           </Stack>
         </Container>
