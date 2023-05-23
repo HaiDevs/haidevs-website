@@ -55,8 +55,8 @@ const SocialButton = ({
 const Footer = () => {
   return (
     <Box
-     borderTopWidth={1}
-     borderTopColor={theme.colors.neutral['100']}
+      borderTopWidth={1}
+      borderTopColor={theme.colors.neutral['100']}
       bg={useColorModeValue(theme.colors.neutral['900'], theme.colors.neutral['800'])}
       color={useColorModeValue(theme.colors.neutral['100'], theme.colors.neutral['200'])}>
       {/* <Container as={Stack} maxW={'6xl'} py={10}>
@@ -97,12 +97,12 @@ const Footer = () => {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2023 HaiDevs. Nou menm sèlman ki gen dwa sou sit sa</Text>
+          <Text>© 2023 HaiDevs. Tout dwa rezève</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'https://twitter.com/HaiDevs'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'Discord'} href={'https://discord.gg/tDVzKz45'}>
+            <SocialButton label={'Discord'} href={'https://discord.gg/7d4G2KRNpD'}>
               <FaDiscord />
             </SocialButton>
           </Stack>
