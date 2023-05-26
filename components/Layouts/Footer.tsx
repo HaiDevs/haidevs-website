@@ -55,8 +55,8 @@ const SocialButton = ({
 const Footer = () => {
   return (
     <Box
-     borderTopWidth={1}
-     borderTopColor={theme.colors.neutral['100']}
+      borderTopWidth={1}
+      borderTopColor={theme.colors.neutral['100']}
       bg={useColorModeValue(theme.colors.neutral['900'], theme.colors.neutral['800'])}
       color={useColorModeValue(theme.colors.neutral['100'], theme.colors.neutral['200'])}>
       {/* <Container as={Stack} maxW={'6xl'} py={10}>
@@ -102,7 +102,7 @@ const Footer = () => {
             <SocialButton label={'Twitter'} href={'https://twitter.com/HaiDevs'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'Discord'} href={'https://discord.gg/tDVzKz45'}>
+            <SocialButton label={'Discord'} href={'https://discord.gg/7d4G2KRNpD'}>
               <FaDiscord />
             </SocialButton>
           </Stack>
