@@ -20,34 +20,30 @@ const SocialMediaCard: FC<SocialMediaCardType> = ({ description, icon, link }) =
       overflow="hidden"
       rounded={0}
       bg={theme.colors.neutral['800']}
-      _hover={{
-        borderColor: theme.colors.neutral['400'],
-        borderWidth: 1
-      }}
       p={5}>
       <Stack align={'start'} spacing={2}>
-        <Flex
-          w={16}
-          h={16}
-          align={'center'}
-          justify={'center'}
-          color={'white'}
-          rounded={'full'}
-          bg={useColorModeValue(theme.colors.neutral['900'], theme.colors.neutral['400'])}>
-          {icon}
-        </Flex>
-        <Box mt={2}>
-          <LinkOverlay
-            isExternal
-            href={link}
-          >
+        <LinkOverlay
+          isExternal
+          href={link}
+        >
+          <Flex
+            w={16}
+            h={16}
+            align={'center'}
+            justify={'center'}
+            color={'white'}
+            rounded={'full'}
+            bg={useColorModeValue(theme.colors.neutral['900'], theme.colors.neutral['400'])}>
+            {icon}
+          </Flex>
+          <Box mt={2}>
             <Text mt={1} fontSize={'md'} color={theme.colors.neutral['100']}>
               {description}
             </Text>
-          </LinkOverlay>
-        </Box>
+          </Box>
+        </LinkOverlay>
       </Stack>
-    </LinkBox>
+    </LinkBox >
   );
 };
 

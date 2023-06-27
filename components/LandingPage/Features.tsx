@@ -29,9 +29,6 @@ const FeaturesSection: FC = () => {
       <Container maxW={'5xl'} mt={12}>
         <Flex flexWrap="wrap" gridGap={0} justify="center">
           <Card
-            borderTopWidth={1}
-            borderLeftWidth={1}
-            borderRightWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Ayiti Avantou'}
             icon={<Text fontSize={88}>🇭🇹</Text>}
             description={
@@ -39,10 +36,6 @@ const FeaturesSection: FC = () => {
             }
           />
           <Card
-            borderTopWidth={1}
-            borderRightWidth={1}
-            borderLeftWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
-            borderBottomWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Pa gen Chèf'}
             icon={<Portrait width="200" height="200" objectFit='cover' src={FlatCompanyImg} alt='Flat Company' />
             }
@@ -51,9 +44,6 @@ const FeaturesSection: FC = () => {
             }
           />
           <Card
-            borderLeftWidth={1}
-            borderBottomWidth={1}
-            borderRightWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Nou Grandi Ansanm'}
             icon={<Portrait width="100" height="100" objectFit='cover' src={GrowTogetherImg} alt='Grow Together' />}
             description={
@@ -61,9 +51,6 @@ const FeaturesSection: FC = () => {
             }
           />
           <Card
-            borderRightWidth={1}
-            borderBottomWidth={1}
-            borderLeftWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Totalman Ouvè'}
             icon={<Portrait width="200" height="200" objectFit='cover' src={TransparencyImg} alt='Transparency' />}
             description={
