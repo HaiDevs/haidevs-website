@@ -52,12 +52,12 @@ export default function Navbar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
+          {/* <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue(theme.colors.neutral["100"], theme.colors.neutral["100"])}>
             Logo
-          </Text>
+          </Text> */}
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -255,11 +255,11 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Kiyès Nou ye',
+    label: 'Akèy',
     href: '/',
   },
   {
     label: 'Blòg',
-    href: '/blòg',
+    href: '/blog',
   },
 ];

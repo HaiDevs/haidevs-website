@@ -14,7 +14,7 @@ import Card from './Card';
 import Portrait from './Portrait';
 import { FC } from 'react';
 
-const FeaturesSection: FC = () =>{
+const FeaturesSection: FC = () => {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
@@ -31,20 +31,20 @@ const FeaturesSection: FC = () =>{
           <Card
             borderTopWidth={1}
             borderLeftWidth={1}
-            borderRightWidth={{base: 1, sm: 1, md: 1, lg: 0}}
+            borderRightWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Ayiti Avantou'}
             icon={<Text fontSize={88}>🇭🇹</Text>}
             description={
-             'Nou fè efò pou nou anplifye travay tout Devlopè ak Kominote Ayisyen yo sou fòm dijital ak fizik. Sitou sa ki baze an Ayiti yo.'
+              'Nou fè efò pou nou anplifye travay tout Devlopè ak Kominote Ayisyen yo sou fòm dijital ak fizik. Sitou sa ki baze an Ayiti yo.'
             }
           />
           <Card
             borderTopWidth={1}
             borderRightWidth={1}
-            borderLeftWidth={{base: 1, sm: 1, md: 1, lg: 0}}
-            borderBottomWidth={{base: 1, sm: 1, md: 1, lg: 0}}
+            borderLeftWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
+            borderBottomWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Pa gen Chèf'}
-            icon={<Portrait width="200" height="200" objectFit='cover' src={FlatCompanyImg} alt='Flat Company' /> 
+            icon={<Portrait width="200" height="200" objectFit='cover' src={FlatCompanyImg} alt='Flat Company' />
             }
             description={
               'Eksepte pou moderatè kominote yo, pa gen dirijan. Manm kominote yo se lidè yo!'
@@ -53,17 +53,17 @@ const FeaturesSection: FC = () =>{
           <Card
             borderLeftWidth={1}
             borderBottomWidth={1}
-            borderRightWidth={{base: 1, sm: 1, md: 1, lg: 0}}
+            borderRightWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Nou Grandi Ansanm'}
             icon={<Portrait width="100" height="100" objectFit='cover' src={GrowTogetherImg} alt='Grow Together' />}
             description={
-              'Nou tout gen potansyel, men nou tout pa jwenn menm opotinite. Nou espere ankouraje egalite epi pemet li pi fasil pou Devlopè Ayisyen yo aprann youn de lot atravè evènman kominote nou yo dirije.'
+              'Nou tout gen potansyel, men nou tout pa jwenn menm opotinite. Nou espere ankouraje egalite epi pèmèt li pi fasil pou Devlopè Ayisyen yo aprann youn de lot atravè evènman kominote nou yo dirije.'
             }
           />
           <Card
             borderRightWidth={1}
             borderBottomWidth={1}
-            borderLeftWidth={{base: 1, sm: 1, md: 1, lg: 0}}
+            borderLeftWidth={{ base: 1, sm: 1, md: 1, lg: 0 }}
             heading={'Totalman Ouvè'}
             icon={<Portrait width="200" height="200" objectFit='cover' src={TransparencyImg} alt='Transparency' />}
             description={
