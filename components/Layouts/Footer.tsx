@@ -97,7 +97,7 @@ const Footer = () => {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© {`${new Date().getFullYear()}`} HaiDevs. Nou menm sèlman ki gen dwa sou sit sa</Text>
+          <Text>© {`${new Date().getFullYear()}`} HaiDevs. Tout dwa rezève</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'https://twitter.com/HaiDevs'}>
               <FaTwitter />
