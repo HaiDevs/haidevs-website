@@ -32,6 +32,7 @@ const HeroSection: FC = () => {
             </Box>
 
             {paragraph('Pi gwo kominote dijital', theme.colors.neutral['100'])}
+            {paragraph(' devlopè Ayisyen', theme.colors.neutral['100'])}
             {paragraph(' nan mond lan.', theme.colors.neutral['100'])}
           </Heading>
         </Stack>
