@@ -7,6 +7,11 @@ div[data-rehype-pretty-code-fragment] {
   margin: 100px 0 100px 0;
 }
 
+div[data-rehype-pretty-code-fragment] {
+  /* stylist preferences */
+  margin-top: 100px !important;
+}
+
 div[data-rehype-pretty-code-fragment] pre {
   overflow-x: auto;
 
