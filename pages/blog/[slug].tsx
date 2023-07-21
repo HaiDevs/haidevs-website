@@ -13,14 +13,15 @@ import {
 } from "../../utils/mdxUtils";
 import { IPost } from "interfaces/Posts";
 
-import LayoutBlog from "@components/LayoutBlog";
-import { Heading, useColorModeValue, Text, VStack } from "@chakra-ui/react";
+import LayoutBlog from "@components/Layouts/LayoutBlog";
+import { Heading, useColorModeValue, Text, VStack, Container } from "@chakra-ui/react";
 import Image from "@components/common/Image";
 import { useMDXComponents } from "mdx-components";
 import remarkToc from "remark-toc";
-import PostTags from "@components/PostTags";
-import TableContents from "@components/TableContents";
+import PostTags from "@components/blog/PostTags";
+import TableContents from "@components/blog/TableContents";
 import Head from "next/head";
+import { theme } from "utils/theme";
 
 type PostPageProps = {
   source: MDXRemoteSerializeResult;
@@ -34,18 +35,20 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
       <Head>
         <title>{frontMatter.title}</title>
       </Head>
-      <VStack height={148} marginTop={50}>
+
+      <VStack  marginTop={50}>
         <PostTags tags={frontMatter.tags} />
         <Heading
           fontWeight={"900"}
-          fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+					fontSize={{ base: '1xl', sm: '4xl', md: '6xl' }}
           lineHeight={"110%"}
           as="h1"
+					color={theme.colors.neutral['100']}
           textAlign="center"
         >
           {frontMatter.title}
         </Heading>
-        <Text color={gray}>
+        <Text color={gray} as={"p"} fontSize={{ base: "sm", md: "md" }}>
           {dayjs(frontMatter.date).format("MMMM D, YYYY")} &mdash;{" "}
           {frontMatter.readingTime}
         </Text>

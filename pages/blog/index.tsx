@@ -1,10 +1,11 @@
 import React from "react";
 import { GetStaticProps } from "next";
 import { Heading, Stack, VStack, Center } from "@chakra-ui/react";
-import Post from "@components/Post";
+import Post from "@components/blog/Post";
 import { getAllPosts } from "utils/mdxUtils";
 import { IPost, IPosts } from "interfaces/Posts";
-import LayoutBlog from "@components/LayoutBlog";
+import LayoutBlog from "@components/Layouts/LayoutBlog";
+import { theme } from 'utils/theme';
 
 export default function Posts({ posts }: IPosts) {
 	return (
@@ -16,6 +17,7 @@ export default function Posts({ posts }: IPosts) {
 						fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
 						lineHeight={"110%"}
 						as="h1"
+						color={theme.colors.neutral['100']}
 					>
 						Blog
 					</Heading>
