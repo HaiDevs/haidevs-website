@@ -11,7 +11,7 @@ import React from "react";
 
 import { IPost } from "interfaces/Posts";
 import PostTags from "./PostTags";
-import CustomLink from "./common/CustomLink";
+import CustomLink from "../common/CustomLink";
 
 export default function Post(post: IPost) {
 	return (

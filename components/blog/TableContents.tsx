@@ -1,6 +1,7 @@
 import { Box, Heading, List, ListItem, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import CustomLink from "./common/CustomLink";
+import CustomLink from "../common/CustomLink";
+import { theme } from "utils/theme";
 
 export default function TableContents() {
   const [headings, setHeadings] = useState<[]>([]);
@@ -40,6 +41,7 @@ export default function TableContents() {
             as="h3"
             mb={3}
             textTransform="uppercase"
+            color={theme.colors.neutral['100']}
           >
             On this page
           </Heading>
