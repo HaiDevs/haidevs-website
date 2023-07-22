@@ -35,6 +35,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# next-pwa generated files 
+# next-pwa generated files
 public/sw*.*
 public/workbox*.*
+
+# histiry
+.history
+
+# vscode
+.vscode
