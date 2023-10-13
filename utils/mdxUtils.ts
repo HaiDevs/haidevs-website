@@ -63,7 +63,7 @@ export function getAllPosts() {
 // mdxOptions
 export const rehypePrettyCodeOptions: Partial<Options> = {
 	theme: "one-dark-pro",
-	onVisitHighlightedLine(node) {
+	onVisitHighlightedLine(node:any) {
 		node.properties.className.push("line--highlighted");
 	}
 };
