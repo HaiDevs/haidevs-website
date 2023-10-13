@@ -1,0 +1,82 @@
+---
+title: How to use Reduce in JavaScript
+tags:
+  - arrays
+date: '2023-05-09'
+excerpt: 'The reduce function of an array is one of the most versatile functions in JavaScript. With it you can accomplish a lot of the functions from array and math objects.'
+cover_image: 'https://source.unsplash.com/Im7lZjxeLhg'
+---
+
+<Image image={'https://source.unsplash.com/Im7lZjxeLhg'}/>
+
+
+Last month, I had the chance to attend CSS Day in Amsterdam, a two day event split between a “UI day” focusing on the intersection of design and development and a “CSS day”, with speakers who covered more in-depth, technical CSS subjects. The talks were as diverse as the background of the speakers themselves, but there was one common thread: in this era of rapid change, we have to ask ourselves if we, as product people, are equipped to design for:
+
+
+
+```js title="icons.jsx"
+
+export default function Icons() {
+	return (
+		<Stack direction={"row"} spacing={4}>
+			<SocialButton label={"Twitter"} href={"#"}>
+				<FaTwitter color="gray" fontSize={"1.2em"} />
+			</SocialButton>
+			<SocialButton label={"YouTube"} href={"#"}>
+				<FaYoutube color="gray" fontSize={"1.2em"} />
+			</SocialButton>
+			<SocialButton label={"Instagram"} href={"#"}>
+				<FaInstagram color="gray" fontSize={"1.2em"} />
+			</SocialButton>
+		</Stack>
+	);
+}
+
+```
+## What does automation mean for designers?
+
+It's hard to work on a product team that hasn’t automated some part of their workflow in the name of productivity.
+If machines can take care of the repeatable tasks and heavy lifting, designers can focus on doing more meaningful work.
+But how does this affect the way we use the work being created by machines?
+
+Josh Clark, founder of design studio Big Medium, provoked the audience with this very question during his talk, ‘A.I. is your New Design Material’.
+Some of the most impressive advancements in recent technology are things like facial recognition, predictive text, and image search, all powered by machine learning. But it's important to remember—all of these technologies are still built on code. The upside is less room for error. No real emotions, expectations, or feelings get in the way of the job it was designed to do.
+
+
+## Are we designing for users or ourselves?
+
+People don't always know what they want, even if they think the do. As Joe Leech, a UX psychologist says, "People want more choices, but can't deal with them.”
+
+So how do we design for our users, if our users aren’t always telling us the truth? This is one of the most important questions, and something that extensive UX research helps us accomplish.
+
+Back in the 2000s, psychologists Sheena Iyengar and Mark Lepper ran a study regarding consumer choices. They went to a local supermarket, and instructed the store to only sell 6 varieties of jam one week, followed by 30 varieties the following week.
+
+```js showLineNumbers title="app.jsx"
+const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
+	const gray = useColorModeValue("gray", "gray.800");
+	console.log(frontMatter);
+	return (
+		<>
+			<LayoutBlog>
+				<VStack height={148} marginTop={50}>
+					<BlogTags tags={frontMatter.tags} />
+					<Heading
+						fontWeight={"900"}
+						fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
+						lineHeight={"110%"}
+						as="h1"
+						textAlign="center"
+					>
+						{frontMatter.title}
+					</Heading>
+					<Text color={gray}>
+						{dayjs(frontMatter.date).format("MMMM D, YYYY")} &mdash;
+					</Text>
+				</VStack>
+
+				<MDXRemote {...source} components={useMDXComponents({ Image })} />
+			</LayoutBlog>
+		</>
+	);
+};
+```
